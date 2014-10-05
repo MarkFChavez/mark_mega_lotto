@@ -1,4 +1,4 @@
-module MegaLotto
+module MarkMegaLotto
   class Drawing
     def draw
       8.times.map { single_draw }
