@@ -26,6 +26,18 @@ module MarkMegaLotto
       end
     end
 
+    describe "#reset" do
+      it "resets the configuration" do
+        MarkMegaLotto.configure do |config|
+          config.drawing_count = 20
+        end
+
+        MarkMegaLotto.reset
+
+        expect(MarkMegaLotto::Drawing.new.draw.size).to eq 8
+      end
+    end
+
     describe "can set the output count" do
       before(:each) do
         MarkMegaLotto.configure do |config|
