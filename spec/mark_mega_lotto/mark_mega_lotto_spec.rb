@@ -25,5 +25,18 @@ module MarkMegaLotto
         end
       end
     end
+
+    describe "can set the output count" do
+      before(:each) do
+        MarkMegaLotto.configure do |config|
+          config.drawing_count = 10
+        end
+      end
+
+      it "returns an array with 10 elements" do
+        drawing = MarkMegaLotto::Drawing.new.draw
+        expect(drawing.size).to eq 10
+      end
+    end
   end
 end
