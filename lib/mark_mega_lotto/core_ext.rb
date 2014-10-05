@@ -1,5 +1,3 @@
-class Array
-  def awesome
-    last
-  end
-end
+require "mark_mega_lotto/core_ext/array"
+require "mark_mega_lotto/core_ext/string"
+
