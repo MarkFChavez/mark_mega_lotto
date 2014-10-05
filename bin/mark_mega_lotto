@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/mark_mega_lotto/drawing"
+
+drawing = MarkMegaLotto::Drawing.new.draw
+puts drawing
+
+
